@@ -1,0 +1,13 @@
+version: "3"
+services:
+  web:
+    build: .
+    tty: true
+    ports:
+    - "80:80"
+    - "443:443"
+    environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_USER=root
+    - TZ=Europe/Madrid
+    - PORT=80
